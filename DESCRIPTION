@@ -7,5 +7,5 @@ Description: Adds PWA support for Shiny apps, Including desktop and mobile capab
 License: MIT
 Encoding: UTF-8
 LazyData: true
-Depends: htmltools, glue
+Depends: htmltools, glue, readr
 RoxygenNote: 7.1.0

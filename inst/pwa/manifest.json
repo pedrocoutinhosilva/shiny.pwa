@@ -1,0 +1,17 @@
+{
+  "name": "<<name>>",
+  "short_name": "<<name>>",
+  "start_url": "<<start_url>>",
+  "display": "standalone",
+  "background_color": "<<background_color>>",
+  "theme_color": "<<theme_color>>",
+  "description": "<<description>>",
+  "icons": [
+    {
+      "src": "<<icon>>",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
