@@ -10,9 +10,24 @@ supportPWA(
   location = "",
   icon = NULL,
   color = "#bada55",
-  offline_page = NULL,
+  use_offline_template = TRUE,
   offline_message = "Looks like you are offline :O"
 )
+}
+\arguments{
+\item{base_url}{the base URL where the app is hosted}
+
+\item{title}{The title of your Shiny app}
+
+\item{location}{subdirectory where the app is hosted. Only required if the app is not on the root domain.}
+
+\item{icon}{Icon to be used for the app. Should be 512x512. A default icon is provided.}
+
+\item{color}{Color for the app. Used when the app is installed to color the minified browser elements.}
+
+\item{use_offline_template}{Should the default offine template be used. Your own template can be created under `www/pwa/offline.html`}
+
+\item{offline_message}{When using the default offline page template, can be used to change the displayed message.}
 }
 \value{
 A UI definition that can be passed to the [shinyUI] function.
@@ -21,8 +36,8 @@ A UI definition that can be passed to the [shinyUI] function.
 Adds PWA app support.
 }
 \note{
-See \url{https://css-tricks.com/snippets/css/complete-guide-grid/}
-  for additional details on using css grids
+See \url{https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps}
+  for additional details on pwas
 }
 \examples{
 supportPWA()
