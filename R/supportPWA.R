@@ -3,7 +3,7 @@
 #' @param base_url the base URL where the app is hosted
 #' @param title The title of your Shiny app
 #' @param location subdirectory where the app is hosted. Only required if the app is not on the root domain.
-#' @param icon Icon to be used for the app. Should be 512x512. A default icon is provided.
+#' @param icon Icon to be used for the app. Should be 512x512 and saved under `www/pwa/offline.html`. A default icon is provided.
 #' @param color Color for the app. Used when the app is installed to color the minified browser elements.
 #' @param use_offline_template Should the default offine template be used. Your own template can be created under `www/pwa/offline.html`
 #' @param offline_message When using the default offline page template, can be used to change the displayed message.
@@ -21,7 +21,7 @@ supportPWA <- function(base_url,
                        title = "My Shiny PWA",
                        location = "",
                        icon = NULL,
-                       color = "#bada55",
+                       color = "#000000",
                        use_offline_template = TRUE,
                        offline_message = "Looks like you are offline :O") {
   package_dir <- system.file("pwa", package = "shiny.pwa")
@@ -44,7 +44,7 @@ supportPWA <- function(base_url,
   }
 
   # if no offline HTML page is defined, use the default one.
-  if (is.null(offline_page)) {
+  if (use_offline_template) {
     offline_page <- read_file(paste0(package_dir, "/", "offline.html"))
 
     offline_arguments <- list(

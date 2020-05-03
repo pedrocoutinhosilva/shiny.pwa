@@ -9,7 +9,7 @@ supportPWA(
   title = "My Shiny PWA",
   location = "",
   icon = NULL,
-  color = "#bada55",
+  color = "#000000",
   use_offline_template = TRUE,
   offline_message = "Looks like you are offline :O"
 )
@@ -21,7 +21,7 @@ supportPWA(
 
 \item{location}{subdirectory where the app is hosted. Only required if the app is not on the root domain.}
 
-\item{icon}{Icon to be used for the app. Should be 512x512. A default icon is provided.}
+\item{icon}{Icon to be used for the app. Should be 512x512 and saved under `www/pwa/offline.html`. A default icon is provided.}
 
 \item{color}{Color for the app. Used when the app is installed to color the minified browser elements.}
 
