@@ -14,7 +14,7 @@ library(shiny.pwa)
 ```
 
  - 3 - Call the `supportPWA` function in your UI definition, in any place you could add ui elements (for example `mainPanel` in a `fluidPage`):
-```
+```R
 # ui.R
 ui <- fluidPage(
   titlePanel("Hello Shiny!"),
@@ -38,7 +38,6 @@ The following options are available:
 - **color** Color for the app. Used when the app is installed to color the minified browser elements.
 - **use_offline_template** Should the default offine template be used. Your own template can be created under `www/pwa/offline.html`
 - **offline_message** When using the default offline page template, can be used to change the displayed message.
-
 ```
 NOTE: While base_url is the only required argument, location is VERY important if
 when your app is hosted in a subdirectory.
@@ -59,10 +58,10 @@ It will then be available in standalone mode and show as a normal installed appl
 ![Screenshot](images/standalone-desktop.png)
 
 ### Mobile
-On mobile you can use chrome, firefox or safari to install the PWA. On the first visit you will see a prompt for installation, on the following visits each browser has its own standards, for example chrome has the option available under "Add to home" in the ... menu, firefox displays a `+` button on the address bar.
+On mobile you can use chrome, firefox or safari to install the PWA. On the first visit you will see a prompt for installation, on the following visits each browser has its own standards, for example chrome has the option available under "Add to home" in the right top corner options menu, firefox displays a `+` button on the address bar.
 
 ![Screenshot](images/chrome-mobile.png)
 ![Screenshot](images/firefox-mobile.png)
 
-After installing the app will show on your home screen as a normal application.
+After installing the app will show and behave on your home screen as a normal mobile application.
 ![Screenshot](images/installed-mobile.png)
