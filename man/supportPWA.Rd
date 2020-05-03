@@ -4,7 +4,15 @@
 \alias{supportPWA}
 \title{Adds PWA app support.}
 \usage{
-supportPWA()
+supportPWA(
+  base_url,
+  title = "My Shiny PWA",
+  location = "",
+  icon = NULL,
+  color = "#bada55",
+  offline_page = NULL,
+  offline_message = "Looks like you are offline :O"
+)
 }
 \value{
 A UI definition that can be passed to the [shinyUI] function.

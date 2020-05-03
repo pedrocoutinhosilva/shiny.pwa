@@ -75,7 +75,7 @@ supportPWA <- function(base_url,
     tags$script(HTML(glue::glue(
       "if('serviceWorker' in navigator) {
         navigator.serviceWorker
-                 .register('<</location>>service-worker.js', { scope: '/<<location>>' })
+                 .register('/<<location>>service-worker.js', { scope: '/<<location>>' })
                  .then(function() { console.log('Service Worker Registered'); });
       }", .open = "<<", .close = ">>"))),
     tags$meta(name = "description", content = title),
