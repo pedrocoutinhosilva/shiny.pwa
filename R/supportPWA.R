@@ -9,7 +9,8 @@
 #' supportPWA()
 #'
 #' @export
-supportPWA <- function(title = "My Shiny PWA",
+supportPWA <- function(base_url,
+                       title = "My Shiny PWA",
                        location = "/",
                        icon = NULL,
                        color = "#bada55",
@@ -53,7 +54,7 @@ supportPWA <- function(title = "My Shiny PWA",
     read_file(paste0(package_dir, "/", "manifest.json")),
     name = title,
     short_name = title,
-    start_url = location,
+    start_url = base_url,
     background_color = color,
     theme_color = color,
     description = title,
