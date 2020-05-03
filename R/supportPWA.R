@@ -11,7 +11,7 @@
 #' @export
 supportPWA <- function(base_url,
                        title = "My Shiny PWA",
-                       location = "/",
+                       location = "",
                        icon = NULL,
                        color = "#bada55",
                        offline_page = NULL,
@@ -54,7 +54,7 @@ supportPWA <- function(base_url,
     read_file(paste0(package_dir, "/", "manifest.json")),
     name = title,
     short_name = title,
-    start_url = base_url,
+    start_url = glue::glue("{base_url}{location}"),
     background_color = color,
     theme_color = color,
     description = title,
@@ -75,7 +75,7 @@ supportPWA <- function(base_url,
     tags$script(HTML(glue::glue(
       "if('serviceWorker' in navigator) {
         navigator.serviceWorker
-                 .register('<<location>>/service-worker.js', { scope: '<<location>>/' })
+                 .register('<</location>>service-worker.js', { scope: '/<<location>>' })
                  .then(function() { console.log('Service Worker Registered'); });
       }", .open = "<<", .close = ">>"))),
     tags$meta(name = "description", content = title),
