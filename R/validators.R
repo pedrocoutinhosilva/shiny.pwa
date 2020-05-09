@@ -31,10 +31,10 @@ validateDomain <- function(domain) {
 #' @seealso [validateDomain()], [validateIcon()]
 validateLocation <- function(location) {
   if (!startsWith(location, "/")) {
-    icon <- paste0("/", location)
+    location <- paste0("/", location)
   }
   if (!endsWith(location, "/")) {
-    icon <- paste0(location, "/")
+    location <- paste0(location, "/")
   }
   location
 }
