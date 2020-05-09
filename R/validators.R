@@ -30,15 +30,12 @@ validateDomain <- function(domain) {
 #' @family validators
 #' @seealso [validateDomain()], [validateIcon()]
 validateLocation <- function(location) {
-  if (startsWith(location, "/")) {
-    location <- substr(location, 2, nchar(location))
-    warning("Removing location forward slash (/).")
+  if (!startsWith(location, "/")) {
+    icon <- paste0("/", location)
   }
-  if (endsWith(location, "/")) {
-    location <- substr(location, 1, nchar(location) - 1)
-    warning("Removing location forward slash (/).")
+  if (!endsWith(location, "/")) {
+    icon <- paste0(location, "/")
   }
-
   location
 }
 
