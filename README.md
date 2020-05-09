@@ -31,15 +31,15 @@ ui <- fluidPage(
 )
 ```
 The following options are available:
-- **base_url** the base URL where the app is hosted
+- **domain** the base URL where the app is hosted
 - **title** The title of your Shiny app
 - **location** subdirectory where the app is hosted. Only required if the app is not on the root domain.
-- **icon** Icon to be used for the app. Should be 512x512 and saved under `www/pwa/offline.html`. A default icon is provided.
-- **color** Color for the app. Used when the app is installed to color the minified browser elements.
-- **use_offline_template** Should the default offine template be used. Your own template can be created under `www/pwa/offline.html`
-- **offline_message** When using the default offline page template, can be used to change the displayed message.
+- **icon** Icon Path to be used for the app. Size should be 512x512px. If left NULL a default icon is provided.
+- **color** Color of the app. Used to color the browser elements when the pwa is installed.
+- **offline_template** Path to the offline template you want to use. If left NULL the default template is used.
+- **offline_message** When using the default offline page template, message to be displayed.
 ```
-NOTE: While base_url is the only required argument, location is VERY important if
+NOTE: While domain is the only required argument, location is VERY important if
 when your app is hosted in a subdirectory.
 ```
 
@@ -49,7 +49,7 @@ when your app is hosted in a subdirectory.
 User experience depends on the OS and browser.
 
 ### Desktop
-On desktop (Unix and Windows) you can use chrome to install the PWA as a standalone application. This can be done via the install button on the address bar:
+On desktop (Unix, MAC or Windows) you can use chrome to install the PWA as a standalone application. This can be done via the install button on the address bar:
 
 ![Screenshot](images/chrome-desktop.png)
 

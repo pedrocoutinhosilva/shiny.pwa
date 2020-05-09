@@ -7,7 +7,8 @@
 #'
 #' @return A UI definition that can be passed to the [shinyUI] function.
 #'
-#' @export
+#' @family dependencies
+#' @seealso [generateFiles()]
 loadDependencies <- function(title, icon, color, location = "") {
   register_worker <- tags$script(
     applyTemplate(
@@ -41,8 +42,6 @@ loadDependencies <- function(title, icon, color, location = "") {
 #' @param color Color of the app. Used to color the browser elements when the pwa is installed.
 #'
 #' @return A UI definition that can be passed to the [shinyUI] function.
-#'
-#' @export
 generateFiles <- function(title, domain, location, offline_template, offline_message, icon, color) {
   createDirectories()
   createServiceWorker()

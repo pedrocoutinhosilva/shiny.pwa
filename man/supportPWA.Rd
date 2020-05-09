@@ -2,44 +2,51 @@
 % Please edit documentation in R/supportPWA.R
 \name{supportPWA}
 \alias{supportPWA}
-\title{Adds PWA app support.}
+\title{Adds PWA support. Takes care of all the support required for browser to
+recognise the application as a Progressive Web app.}
 \usage{
 supportPWA(
-  base_url,
+  domain,
   title = "My Shiny PWA",
   location = "",
   icon = NULL,
   color = "#000000",
-  use_offline_template = TRUE,
-  offline_message = "Looks like you are offline :O"
+  offline_template = NULL,
+  offline_message = "Looks like you are offline :/"
 )
 }
 \arguments{
-\item{base_url}{the base URL where the app is hosted}
+\item{domain}{the base URL where the app is hosted}
 
 \item{title}{The title of your Shiny app}
 
-\item{location}{subdirectory where the app is hosted. Only required if the app is not on the root domain.}
+\item{location}{subdirectory where the app is hosted.
+Only required if the app is not on the root domain.}
 
-\item{icon}{Icon to be used for the app. Should be 512x512 and saved under `www/pwa/offline.html`. A default icon is provided.}
+\item{icon}{Icon Path to be used for the app. Size should be 512x512px.
+If left NULL a default icon is provided.}
 
-\item{color}{Color for the app. Used when the app is installed to color the minified browser elements.}
+\item{color}{Color of the app. Used to color the browser
+elements when the pwa is installed.}
 
-\item{use_offline_template}{Should the default offine template be used. Your own template can be created under `www/pwa/offline.html`}
+\item{offline_template}{Path to the offline template you want to use.
+If left NULL the default template is used.}
 
-\item{offline_message}{When using the default offline page template, can be used to change the displayed message.}
+\item{offline_message}{When using the default offline page template
+defines the message to be displayed.}
 }
 \value{
 A UI definition that can be passed to the [shinyUI] function.
 }
 \description{
-Adds PWA app support.
+Adds PWA support. Takes care of all the support required for browser to
+recognise the application as a Progressive Web app.
 }
 \note{
-See \url{https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps}
-  for additional details on pwas
+For additional details on progressive web apps, visit
+   \url{https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps}
 }
 \examples{
-supportPWA()
+supportPWA("https://myapp.com")
 
 }

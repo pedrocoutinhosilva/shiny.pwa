@@ -3,10 +3,7 @@
 #'
 #' @param template A string with placeholders that can be replaced with the given arguments.
 #' @param arguments Named list with values used for the template placeholders.
-#'
 #' @return A string based on the template with the diferent argumetns applied.
-#'
-#' @export
 applyTemplate <- function(template, arguments = list()) {
   do.call(
     glue::glue,
@@ -21,26 +18,38 @@ applyTemplate <- function(template, arguments = list()) {
   )
 }
 
+#' Get the full path for a default file template
+#'
+#' @param file Name of the file including the file extension.
+getTemplate <- function(file) {
+  paste0(system.file("pwa", package = "shiny.pwa"), "/", file)
+}
+
 #' Generates the folder structure required for the pwa files.
 #'
-#' @export
+#' @family fileGen
+#' @seealso [createServiceWorker()], [createIcon()], [createOfflinePage()],
+#'    [createManifest()]
 createDirectories <- function() {
   dir.create("www/pwa", recursive = TRUE, showWarnings = FALSE)
 }
 
-
 #' Creates the service worker file based of the package template file.
 #'
-#' @export
+#' @family fileGen
+#' @seealso [createDirectories()], [createIcon()], [createOfflinePage()],
+#'    [createManifest()]
 createServiceWorker <- function() {
-  file.copy(paste0(system.file("pwa", package = "shiny.pwa"), "/", "service-worker.js"), paste0(getwd(), "/www/"))
+  file.copy(getTemplate("service-worker.js"), paste0(getwd(), "/www/"))
 }
 
 #' Creates the pwa icon file based on the given path.
 #'
-#' @param icon Path to the icon used for PWA installations.
+#' @family fileGen
+#' @seealso [createDirectories()], [createServiceWorker()],
+#'    [createOfflinePage()], [createManifest()]
 #'
-#' @export
+#' @param icon Path to the icon used for PWA installations.
 createIcon <- function(icon) {
   file.copy(icon, paste0(getwd(), "/www/pwa/icon.png"), overwrite = TRUE)
 }
@@ -48,11 +57,14 @@ createIcon <- function(icon) {
 
 #' Creates the offline landing page.
 #'
-#' @param title title of the page when the pwa is running in offline mode.
-#' @param template HTML template to be used. If null a default template is used.
-#' @param offline_message An argument that can be used in the offline template to show a custom message.
+#' @family fileGen
+#' @seealso [createDirectories()], [createServiceWorker()], [createIcon()],
+#'    [createManifest()]
 #'
-#' @export
+#' @param title title of the page when the pwa is running in offline mode.
+#' @param template HTML template to use. If null a default template is used.
+#' @param offline_message An argument that can be used
+#'    in the offline template to show a custom message.
 createOfflinePage <- function(title, template, offline_message) {
   if(is.null(template)) {
     offline_arguments <- list(
@@ -62,7 +74,7 @@ createOfflinePage <- function(title, template, offline_message) {
 
     writeLines(
       applyTemplate(
-        read_file(paste0(system.file("pwa", package = "shiny.pwa"), "/", "offline.html")),
+        read_file(getTemplate("offline.html")),
         offline_arguments
       ),
       paste0(getwd(), "/www/pwa/offline.html")
@@ -74,11 +86,14 @@ createOfflinePage <- function(title, template, offline_message) {
 
 #' Creates the manifest file.
 #'
+#' @family fileGen
+#' @seealso [createDirectories()], [createServiceWorker()], [createIcon()],
+#'    [createOfflinePage()]
+#'
 #' @param title title of the page when the pwa is running in offline mode.
 #' @param start_url The ull url where the app is hosted.
-#' @param color An argument that can be used in the offline template to show a custom message.
-#'
-#' @export
+#' @param color An argument that can be used in the
+#'    offline template to show a custom message.
 createManifest <- function(title, start_url, color) {
   manifest_arguments <- list(
     name = title,
@@ -91,7 +106,7 @@ createManifest <- function(title, start_url, color) {
   )
   writeLines(
     applyTemplate(
-      read_file(paste0(system.file("pwa", package = "shiny.pwa"), "/", "manifest.json")),
+      read_file(getTemplate("manifest.json")),
       manifest_arguments
     ),
     paste0(getwd(), "/www/pwa/manifest.json")
