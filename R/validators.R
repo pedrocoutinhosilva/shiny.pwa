@@ -54,7 +54,7 @@ validateIcon <- function(icon) {
     warning("Icon not set. Using default package icon.")
     icon <- getTemplate("icon.png")
   } else {
-    if (!endsWith(domain, "png")) {
+    if (!endsWith(icon, "png")) {
       stop("Only png icons are supported")
     }
     if (!startsWith(icon, "/")) {
