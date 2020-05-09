@@ -5,6 +5,7 @@
 #' @param color color used for the UI on the installed pwa
 #' @param location subdirectory where the app is hosted. Only required if the app is not on the root domain.
 #'
+#' @importFrom htmltools tags
 #' @return A UI definition that can be passed to the [shinyUI] function.
 #'
 #' @family dependencies

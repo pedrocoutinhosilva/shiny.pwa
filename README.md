@@ -1,3 +1,7 @@
+---
+title: Progressive Web App Support for Shiny
+---
+
 # shiny.pwa
 Bring the power of Progressive web apps into your shiny dashboards!
 
@@ -51,17 +55,17 @@ User experience depends on the OS and browser.
 ### Desktop
 On desktop (Unix, MAC or Windows) you can use chrome to install the PWA as a standalone application. This can be done via the install button on the address bar:
 
-![Screenshot](images/chrome-desktop.png)
+![Screenshot](man/figures/chrome-desktop.png)
 
 It will then be available in standalone mode and show as a normal installed application:
-![Screenshot](images/installed-desktop.png)
-![Screenshot](images/standalone-desktop.png)
+![Screenshot](man/figures/installed-desktop.png)
+![Screenshot](man/figures/standalone-desktop.png)
 
 ### Mobile
 On mobile you can use chrome, firefox or safari to install the PWA. On the first visit you will see a prompt for installation, on the following visits each browser has its own standards, for example chrome has the option available under "Add to home" in the right top corner options menu, firefox displays a `+` button on the address bar.
 
-![Screenshot](images/chrome-mobile.png)
-![Screenshot](images/firefox-mobile.png)
+![Screenshot](man/figures/chrome-mobile.png)
+![Screenshot](man/figures/firefox-mobile.png)
 
 After installing the app will show and behave on your home screen as a normal mobile application.
-![Screenshot](images/installed-mobile.png)
+![Screenshot](man/figures/installed-mobile.png)

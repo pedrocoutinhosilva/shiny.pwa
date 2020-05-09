@@ -3,10 +3,12 @@
 #'
 #' @param template A string with placeholders that can be replaced with the given arguments.
 #' @param arguments Named list with values used for the template placeholders.
+#' @importFrom utils modifyList
+#' @importFrom glue glue
 #' @return A string based on the template with the diferent argumetns applied.
 applyTemplate <- function(template, arguments = list()) {
   do.call(
-    glue::glue,
+    glue,
     modifyList(
       list(
           template,
@@ -65,6 +67,7 @@ createIcon <- function(icon) {
 #' @param template HTML template to use. If null a default template is used.
 #' @param offline_message An argument that can be used
 #'    in the offline template to show a custom message.
+#' @importFrom readr read_file
 createOfflinePage <- function(title, template, offline_message) {
   if(is.null(template)) {
     offline_arguments <- list(
@@ -97,6 +100,7 @@ createOfflinePage <- function(title, template, offline_message) {
 #' @param start_url The ull url where the app is hosted.
 #' @param color An argument that can be used in the
 #'    offline template to show a custom message.
+#' @importFrom readr read_file
 createManifest <- function(title, start_url, color) {
   manifest_arguments <- list(
     name = title,

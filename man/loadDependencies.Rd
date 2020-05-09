@@ -4,7 +4,7 @@
 \alias{loadDependencies}
 \title{Returns a set of tags required for registering the pwa.}
 \usage{
-loadDependencies(title, icon, color, location = "")
+loadDependencies(title, icon, color, location)
 }
 \arguments{
 \item{title}{Title of the app}

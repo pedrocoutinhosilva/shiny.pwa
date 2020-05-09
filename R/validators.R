@@ -11,11 +11,11 @@ validateDomain <- function(domain) {
   }
   if (!startsWith(domain, "https://")) {
     domain <- paste0("https://", domain)
-    warning("Assuming domain is running in https.")
+    print("Assuming domain is running in https.")
   }
   if (endsWith(domain, "/")) {
     domain <- substr(domain, 1, nchar(domain) - 1)
-    warning("Removing domain forward slash (/).")
+    print("Removing domain forward slash (/).")
   }
   domain
 }
@@ -47,7 +47,7 @@ validateLocation <- function(location) {
 #' @seealso [validateDomain()], [validateLocation()]
 validateIcon <- function(icon) {
   if (is.null(icon) || icon == "") {
-    warning("Icon not set. Using default package icon.")
+    print("Icon not set. Using default package icon.")
     icon <- getTemplate("icon.png")
   } else {
     if (!endsWith(icon, "png")) {
@@ -58,7 +58,7 @@ validateIcon <- function(icon) {
     }
     icon <- paste0(getwd(), icon)
     if (is.null(icon) || !file.exists(icon)) {
-      warning("Icon doesnt exist. Using default package icon.")
+      print("Icon doesnt exist. Using default package icon.")
       icon <- getTemplate("icon.png")
     }
   }
