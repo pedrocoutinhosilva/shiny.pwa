@@ -80,7 +80,10 @@ createOfflinePage <- function(title, template, offline_message) {
       paste0(getwd(), "/www/pwa/offline.html")
     )
   } else {
-    file.copy(template, paste0(getwd(), "/www/pwa/offline.html"), overwrite = TRUE)
+    if (!startsWith(template, "/")) {
+      template <- paste0("/", template)
+    }
+    file.copy(paste0(getwd(), template), paste0(getwd(), "/www/pwa/offline.html"), overwrite = TRUE)
   }
 }
 

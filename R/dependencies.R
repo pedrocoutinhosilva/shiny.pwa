@@ -9,10 +9,10 @@
 #'
 #' @family dependencies
 #' @seealso [generateFiles()]
-loadDependencies <- function(title, icon, color, location = "") {
+loadDependencies <- function(title, icon, color, location) {
   register_worker <- tags$script(
     applyTemplate(
-      read_file(paste0(system.file("pwa", package = "shiny.pwa"), "/", "register-worker.js")),
+      read_file(getTemplate("register-worker.js")),
       list(location = location)
     )
   )

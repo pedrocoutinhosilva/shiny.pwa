@@ -17,7 +17,6 @@ validateDomain <- function(domain) {
     domain <- substr(domain, 1, nchar(domain) - 1)
     warning("Removing domain forward slash (/).")
   }
-
   domain
 }
 
