@@ -1,7 +1,3 @@
----
-title: Progressive Web App Support for Shiny
----
-
 # shiny.pwa
 Bring the power of Progressive web apps into your shiny dashboards!
 
