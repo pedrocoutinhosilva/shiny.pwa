@@ -1,19 +1,21 @@
 # shiny.pwa
-Bring the power of Progressive web apps into your shiny dashboards!
+Bring the power of Progressive web apps into your shiny dashboards! Allow users to install your dashboards allowing them to behave like a standalone application, both in desktop and mobile.
+
+Try it out here: https://sparktuga.shinyapps.io/shinypwa/
 
 # Usage
- - 1 - Install the package from github:
+1 - Install the package from github:
 ```R
 devtools::install_github('pedrocoutinhosilva/shiny.pwa')
 ```
 
- - 2 - Include the library into your project:
+2 - Include the library into your project:
 ```R
 # global.R
 library(shiny.pwa)
 ```
 
- - 3 - Call the `supportPWA` function in your UI definition, in any place you could add ui elements (for example `mainPanel` in a `fluidPage`):
+3 - Call the `supportPWA` function in your UI definition, in any place you could add ui elements (for example `mainPanel` in a `fluidPage`):
 ```R
 # ui.R
 ui <- fluidPage(
@@ -43,7 +45,7 @@ NOTE: While domain is the only required argument, location is VERY important if
 when your app is hosted in a subdirectory.
 ```
 
- - 4 - Thats it!
+4 - Thats it!
 
 # Using PWAs
 User experience depends on the OS and browser.
