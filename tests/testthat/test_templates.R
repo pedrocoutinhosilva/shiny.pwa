@@ -2,7 +2,7 @@ context("Templates")
 
 test_that("Apply Template", {
   expect_equal(
-    applyTemplate("this is a <<field>>.", list(field = "test")),
+    applyTemplate("this is a {{field}}.", list(field = "test")),
     "this is a test."
   )
 })

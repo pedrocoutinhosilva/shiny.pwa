@@ -1,11 +1,11 @@
 {
-  "name": "<<name>>",
-  "short_name": "<<name>>",
-  "start_url": "<<start_url>>",
+  "name": "{{name}}",
+  "short_name": "{{name}}",
+  "start_url": "{{start_url}}",
   "display": "standalone",
-  "background_color": "<<background_color>>",
-  "theme_color": "<<theme_color>>",
-  "description": "<<description>>",
+  "background_color": "{{background_color}}",
+  "theme_color": "{{theme_color}}",
+  "description": "{{description}}",
   "icons": [
     {
       "src": "icon.png",

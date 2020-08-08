@@ -4,20 +4,10 @@
 #' @param template A string with placeholders that can be replaced with the given arguments.
 #' @param arguments Named list with values used for the template placeholders.
 #' @importFrom utils modifyList
-#' @importFrom glue glue
+#' @importFrom htmltools htmlTemplate
 #' @return A string based on the template with the diferent argumetns applied.
 applyTemplate <- function(template, arguments = list()) {
-  do.call(
-    glue,
-    modifyList(
-      list(
-          template,
-          .open = "<<",
-          .close = ">>"
-      ),
-      arguments
-    )
-  )
+  as.character(do.call(htmlTemplate, modifyList(list(text_ = template), arguments)))
 }
 
 #' Get the full path for a default file template
@@ -55,7 +45,6 @@ createServiceWorker <- function() {
 createIcon <- function(icon) {
   file.copy(icon, paste0(getwd(), "/www/pwa/icon.png"), overwrite = TRUE)
 }
-
 
 #' Creates the offline landing page.
 #'
