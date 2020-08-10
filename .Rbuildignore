@@ -8,3 +8,6 @@
 ^README.md$
 examples
 tests
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

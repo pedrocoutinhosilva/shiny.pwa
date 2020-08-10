@@ -20,7 +20,15 @@
 #'    \url{https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps}
 #'
 #' @examples
-#' supportPWA("https://myapp.com")
+#' if (interactive()){
+#' library(shiny.pwa)
+#' ui <- fluidPage(
+#'   supportPWA("https://myapp.com")
+#' )
+#' server <- function(input, output, session) {
+#' }
+#' shinyApp(ui, server)
+#' }
 #'
 #' @export
 supportPWA <- function(domain,
