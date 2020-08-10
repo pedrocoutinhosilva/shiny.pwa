@@ -2,15 +2,16 @@ Package: shiny.pwa
 Type: Package
 Title: Progressive Web App Support for Shiny
 Version: 0.1.0
-Authors@R: person("Pedro", "Silva", email = "sparktuga@gmail.com", role = c("aut", "cre"))
-Description: Adds PWA (Progressive Web App) support for Shiny apps, including desktop and mobile installations.
+Authors@R: person("Pedro", "Silva", email = "sparktuga@gmail.com",
+  role = c("aut", "cre"))
+Description: Adds Progressive Web App support for Shiny apps, including
+  desktop and mobile installations.
 License: GPL (>=2)
 URL: https://github.com/pedrocoutinhosilva/shiny.pwa
 Encoding: UTF-8
 LazyData: true
 Imports:
     htmltools,
-    glue,
     readr
 Suggests:
     testthat

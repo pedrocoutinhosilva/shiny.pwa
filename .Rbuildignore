@@ -6,3 +6,5 @@
 ^.Rproj.user
 ^.git
 ^README.md$
+examples
+tests
