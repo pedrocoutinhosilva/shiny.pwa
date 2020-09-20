@@ -37,10 +37,6 @@ The following options are available:
 - **color** Color of the app. Used to color the browser elements when the pwa is installed.
 - **offline_template** Path to the offline template you want to use. If left NULL the default template is used.
 - **offline_message** When using the default offline page template, message to be displayed.
-```
-NOTE: While domain is the only required argument, location is VERY important if
-when your app is hosted in a subdirectory.
-```
 
 4 - If you prefer to not generate the service worker every time your app starts, you can omit the `output` attribute from the `pwa()` function and instead run `createServiceWorker(output_folder)` to generate a `pwa.service-worker.js` file. This file does not need to be added as a dependency to your UI but must be available under `https://yourapp.com/pwa.service-worker.js`. The easiest way to achieve this with shiny is to add it to your `www` folder.
 
