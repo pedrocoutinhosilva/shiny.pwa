@@ -15,27 +15,24 @@ devtools::install_github('pedrocoutinhosilva/shiny.pwa')
 library(shiny.pwa)
 ```
 
-3 - Call the `supportPWA` function in your UI definition, in any place you could add ui elements (for example `mainPanel` in a `fluidPage`):
+3 - Call the `pwa` function in your UI definition, in any place you could add ui elements (for example `mainPanel` in a `fluidPage`):
 ```R
 # ui.R
 ui <- fluidPage(
   titlePanel("Hello Shiny!"),
-
   sidebarLayout(
-
     sidebarPanel(...),
-
     mainPanel(
-      supportPWA("https://myapp.com"),
+      pwa("https://myapp.com", output = "www"),
       ...
     )
   )
 )
 ```
 The following options are available:
-- **domain** the base URL where the app is hosted
+- **domain** The URL where the app is hosted
 - **title** The title of your Shiny app
-- **location** subdirectory where the app is hosted. Only required if the app is not on the root domain.
+- **output** The base folder used by shiny to serve static files. This is usually the www folder in your project.
 - **icon** Icon Path to be used for the app. Size should be 512x512px. If left NULL a default icon is provided.
 - **color** Color of the app. Used to color the browser elements when the pwa is installed.
 - **offline_template** Path to the offline template you want to use. If left NULL the default template is used.
@@ -44,6 +41,8 @@ The following options are available:
 NOTE: While domain is the only required argument, location is VERY important if
 when your app is hosted in a subdirectory.
 ```
+
+4 - If you prefer to not generate the service worker every time your app starts, you can omit the `output` attribute from the `pwa()` function and instead run `createServiceWorker(output_folder)` to generate a `pwa.service-worker.js` file. This file does not need to be added as a dependency to your UI but must be available under `https://yourapp.com/pwa.service-worker.js`. The easiest way to achieve this with shiny is to add it to your `www` folder.
 
 4 - Thats it!
 
