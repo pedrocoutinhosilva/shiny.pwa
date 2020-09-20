@@ -23,7 +23,7 @@ getTemplate <- function(file) {
 #' @seealso [createServiceWorker()], [createIcon()], [createOfflinePage()],
 #'    [createManifest()]
 createDirectories <- function() {
-  dir.create("www/pwa", recursive = TRUE, showWarnings = FALSE)
+  dir.create(paste0(tempdir(), "/www/pwa"), recursive = TRUE, showWarnings = FALSE)
 }
 
 #' Creates the service worker file based of the package template file.
@@ -31,8 +31,10 @@ createDirectories <- function() {
 #' @family fileGen
 #' @seealso [createDirectories()], [createIcon()], [createOfflinePage()],
 #'    [createManifest()]
-createServiceWorker <- function() {
-  file.copy(getTemplate("service-worker.js"), paste0(getwd(), "/www/"))
+#'
+#' @export
+createServiceWorker <- function(output) {
+  file.copy(getTemplate("pwa-service-worker.js"), paste0(getwd(), "/", output))
 }
 
 #' Creates the pwa icon file based on the given path.
@@ -43,7 +45,7 @@ createServiceWorker <- function() {
 #'
 #' @param icon Path to the icon used for PWA installations.
 createIcon <- function(icon) {
-  file.copy(icon, paste0(getwd(), "/www/pwa/icon.png"), overwrite = TRUE)
+  file.copy(icon, paste0(tempdir(), "/www/pwa/icon.png"), overwrite = TRUE)
 }
 
 #' Creates the offline landing page.
@@ -69,13 +71,13 @@ createOfflinePage <- function(title, template, offline_message) {
         read_file(getTemplate("offline.html")),
         offline_arguments
       ),
-      paste0(getwd(), "/www/pwa/offline.html")
+      paste0(tempdir(), "/www/pwa/offline.html")
     )
   } else {
     if (!startsWith(template, "/")) {
       template <- paste0("/", template)
     }
-    file.copy(paste0(getwd(), template), paste0(getwd(), "/www/pwa/offline.html"), overwrite = TRUE)
+    file.copy(paste0(tempdir(), template), paste0(tempdir(), "/www/pwa/offline.html"), overwrite = TRUE)
   }
 }
 
@@ -105,6 +107,6 @@ createManifest <- function(title, start_url, color) {
       read_file(getTemplate("manifest.json")),
       manifest_arguments
     ),
-    paste0(getwd(), "/www/pwa/manifest.json")
+    paste0(tempdir(), "/www/pwa/manifest.json")
   )
 }

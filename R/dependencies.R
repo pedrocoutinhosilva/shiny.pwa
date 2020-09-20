@@ -43,10 +43,13 @@ loadDependencies <- function(title, icon, color, location) {
 #' @param color Color of the app. Used to color the browser elements when the pwa is installed.
 #'
 #' @return A UI definition that can be passed to the [shinyUI] function.
-generateFiles <- function(title, domain, location, offline_template, offline_message, icon, color) {
+generateFiles <- function(title, domain, location, output, offline_template, offline_message, icon, color) {
   createDirectories()
-  createServiceWorker()
   createIcon(icon)
   createOfflinePage(title, offline_template, offline_message)
   createManifest(title, paste0(domain, location), color)
+  
+  if (!is.null(output)) {
+    createServiceWorker(output)
+  }
 }

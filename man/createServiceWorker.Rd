@@ -4,7 +4,7 @@
 \alias{createServiceWorker}
 \title{Creates the service worker file based of the package template file.}
 \usage{
-createServiceWorker()
+createServiceWorker(output)
 }
 \description{
 Creates the service worker file based of the package template file.

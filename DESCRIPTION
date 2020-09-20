@@ -12,7 +12,9 @@ Encoding: UTF-8
 LazyData: true
 Imports:
     htmltools,
-    readr
+    readr,
+    utils,
+    urltools
 Suggests:
     testthat
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1

@@ -8,6 +8,7 @@ generateFiles(
   title,
   domain,
   location,
+  output,
   offline_template,
   offline_message,
   icon,
