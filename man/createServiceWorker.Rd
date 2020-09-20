@@ -6,6 +6,11 @@
 \usage{
 createServiceWorker(output)
 }
+\arguments{
+\item{output}{Relative folder where to create the service worker file.
+Usually corresponds to the folder used by shiny to serve static files,
+this folder must exist and is usually the www folder of your shiny project.}
+}
 \description{
 Creates the service worker file based of the package template file.
 }

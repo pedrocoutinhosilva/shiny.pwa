@@ -22,6 +22,10 @@ generateFiles(
 
 \item{location}{subdirectory where the app is hosted. Only required if the app is not on the root domain.}
 
+\item{output}{Relative folder where to create the service worker file.
+Usually corresponds to the folder used by shiny to serve static files,
+this folder must exist and is usually the www folder of your shiny project.}
+
 \item{offline_template}{Path to the offline template you want to use. If left NULL the default template is used.}
 
 \item{offline_message}{When using the default offline page template, message to be displayed.}

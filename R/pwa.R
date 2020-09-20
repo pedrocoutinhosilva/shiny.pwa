@@ -62,7 +62,7 @@ pwa <- function(domain,
 
   generateFiles(title, domain, location, output, offline_template, offline_message, icon, color)
 
-  addResourcePath("pwa", paste0(tempdir(), "/www/pwa"))
+  shiny::addResourcePath("pwa", paste0(tempdir(), "/www/pwa"))
 
   loadDependencies(icon, title, color, location)
 }

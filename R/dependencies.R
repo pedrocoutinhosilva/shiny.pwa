@@ -37,6 +37,9 @@ loadDependencies <- function(title, icon, color, location) {
 #' @param title The title of your Shiny app
 #' @param domain the base URL where the app is hosted
 #' @param location subdirectory where the app is hosted. Only required if the app is not on the root domain.
+#' @param output Relative folder where to create the service worker file.
+#'    Usually corresponds to the folder used by shiny to serve static files,
+#'    this folder must exist and is usually the www folder of your shiny project.
 #' @param offline_template Path to the offline template you want to use. If left NULL the default template is used.
 #' @param offline_message When using the default offline page template, message to be displayed.
 #' @param icon Icon Path to be used for the app. Size should be 512x512px. If left NULL a default icon is provided.
@@ -48,7 +51,7 @@ generateFiles <- function(title, domain, location, output, offline_template, off
   createIcon(icon)
   createOfflinePage(title, offline_template, offline_message)
   createManifest(title, paste0(domain, location), color)
-  
+
   if (!is.null(output)) {
     createServiceWorker(output)
   }
