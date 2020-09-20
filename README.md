@@ -1,7 +1,7 @@
 # shiny.pwa
 Bring the power of Progressive web apps into your shiny dashboards! Allow users to install your dashboards allowing them to behave like a standalone application, both in desktop and mobile.
 
-Try it out here: https://sparktuga.shinyapps.io/shinypwa/
+Try it out here: https://sparktuga.shinyapps.io/shinypwa/. If on mobile, or using chrome on desktop, you should be able to install and try out the PWA installation. Check the readme section `Using PWAs` for more information.
 
 # Usage
 ```
