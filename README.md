@@ -4,6 +4,10 @@ Bring the power of Progressive web apps into your shiny dashboards! Allow users 
 Try it out here: https://sparktuga.shinyapps.io/shinypwa/
 
 # Usage
+```
+WARNING: Its important to note that PWAs are only available under the https protocol.
+```
+
 1 - Install the package from github:
 ```R
 devtools::install_github('pedrocoutinhosilva/shiny.pwa')
