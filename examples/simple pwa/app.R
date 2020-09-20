@@ -3,10 +3,9 @@ library(shiny.pwa)
 
 ui <- bootstrapPage(
 
-  supportPWA(
-    "https://sparktuga.shinyapps.io/",
-    title = "A PWA Example",
-    location = "shinypwa"
+  pwa(
+    "https://sparktuga.shinyapps.io/shinypwa",
+    title = "A PWA Example"
   ),
 
   selectInput(inputId = "n_breaks",
