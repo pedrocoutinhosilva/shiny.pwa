@@ -1,4 +1,11 @@
 # shiny.pwa
+
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/pedrocoutinhosilva/shiny.pwa/workflows/R-CMD-check/badge.svg)](https://github.com/pedrocoutinhosilva/shiny.pwa/actions)
+[![cranlogs](https://cranlogs.r-pkg.org/badges/shiny.pwa)](https://CRAN.R-project.org/package=shiny.pwa)
+[![total](https://cranlogs.r-pkg.org/badges/grand-total/shiny.pwa)](https://CRAN.R-project.org/package=shiny.pwa)
+<!-- badges: end -->
+
 Bring the power of Progressive web apps into your shiny dashboards! Allow users to install your dashboards allowing them to behave like a standalone application, both in desktop and mobile.
 
 Try it out here: https://sparktuga.shinyapps.io/shinypwa/. If on mobile, or using chrome on desktop, you should be able to install and try out the PWA installation. Check the readme section `Using PWAs` for more information.
