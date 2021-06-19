@@ -1,6 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^\images
+^images
 .Rhistory
 .gitignore
 ^.Rproj.user
