@@ -1,7 +1,8 @@
 # shiny.pwa
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/pedrocoutinhosilva/shiny.pwa/workflows/R-CMD-check/badge.svg)](https://github.com/pedrocoutinhosilva/shiny.pwa/actions)
+[![R-CMD-check](https://github.com/pedrocoutinhosilva/shiny.pwa/workflows/R-CMD-check/badge.svg)](https://CRAN.R-project.org/package=shiny.pwa)
+[![cranlogs](https://www.r-pkg.org/badges/version/shiny.pwa)](https://CRAN.R-project.org/package=shiny.pwa)
 [![cranlogs](https://cranlogs.r-pkg.org/badges/shiny.pwa)](https://CRAN.R-project.org/package=shiny.pwa)
 [![total](https://cranlogs.r-pkg.org/badges/grand-total/shiny.pwa)](https://CRAN.R-project.org/package=shiny.pwa)
 <!-- badges: end -->
