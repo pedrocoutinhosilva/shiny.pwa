@@ -1,7 +1,7 @@
 Package: shiny.pwa
 Type: Package
 Title: Progressive Web App Support for Shiny
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: person("Pedro", "Silva", email = "pedrocoutinhosilva@gmail.com",
   role = c("aut", "cre"))
 Description: Adds Progressive Web App support for Shiny apps, including
