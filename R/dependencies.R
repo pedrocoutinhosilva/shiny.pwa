@@ -1,7 +1,7 @@
 #' Returns a set of tags required for registering the pwa.
 #'
 #' @param title Title of the app
-#' @param icon Name of the icon file to be user
+#' @param icon Relative path of the icon file used in the pwa manifest file (Defaults to pwa/icon.png).
 #' @param color color used for the UI on the installed pwa
 #' @param location subdirectory where the app is hosted. Only required if the app is not on the root domain.
 #'

@@ -9,7 +9,7 @@ loadDependencies(title, icon, color, location)
 \arguments{
 \item{title}{Title of the app}
 
-\item{icon}{Name of the icon file to be user}
+\item{icon}{Relative path of the icon file used in the pwa manifest file (Defaults to pwa/icon.png).}
 
 \item{color}{color used for the UI on the installed pwa}
 

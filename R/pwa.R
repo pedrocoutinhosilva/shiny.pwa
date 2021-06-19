@@ -6,12 +6,12 @@
 #' @param output Relative folder where to create the service worker file.
 #'    Usually corresponds to the folder used by shiny to serve static files,
 #'    this folder must exist and is usually the www folder of your shiny project.
-#' @param icon Icon Path to be used for the app. Size should be 512x512px.
-#'    If left NULL a default icon is provided.
+#' @param icon Icon path to be used for the app, relative to the project root.
+#'    Recommended size is 512x512px. If left NULL a default icon is provided.
 #' @param color Color of the app. Used to color the browser
 #'    elements when the pwa is installed.
-#' @param offline_template Path to the offline template you want to use.
-#'    If left NULL the default template is used.
+#' @param offline_template Path to the offline template you want to use, relative
+#'    to the project root folder. If left NULL the default template is used.
 #' @param offline_message When using the default offline page template
 #'    defines the message to be displayed.
 #'
