@@ -1,4 +1,12 @@
 # shiny.pwa
+
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/pedrocoutinhosilva/shiny.pwa/workflows/R-CMD-check/badge.svg)](https://CRAN.R-project.org/package=shiny.pwa)
+[![cranlogs](https://www.r-pkg.org/badges/version/shiny.pwa)](https://CRAN.R-project.org/package=shiny.pwa)
+[![cranlogs](https://cranlogs.r-pkg.org/badges/shiny.pwa)](https://CRAN.R-project.org/package=shiny.pwa)
+[![total](https://cranlogs.r-pkg.org/badges/grand-total/shiny.pwa)](https://CRAN.R-project.org/package=shiny.pwa)
+<!-- badges: end -->
+
 Bring the power of Progressive web apps into your shiny dashboards! Allow users to install your dashboards allowing them to behave like a standalone application, both in desktop and mobile.
 
 Try it out here: https://sparktuga.shinyapps.io/shinypwa/. If on mobile, or using chrome on desktop, you should be able to install and try out the PWA installation. Check the readme section `Using PWAs` for more information.
@@ -8,7 +16,14 @@ Try it out here: https://sparktuga.shinyapps.io/shinypwa/. If on mobile, or usin
 WARNING: Its important to note that PWAs are only available under the https protocol.
 ```
 
-1 - Install the package from github:
+1 - Install the package:
+
+from CRAN:
+```R
+install.packages('shiny.pwa')
+```
+
+from github:
 ```R
 devtools::install_github('pedrocoutinhosilva/shiny.pwa')
 ```
@@ -37,9 +52,9 @@ The following options are available:
 - **domain** The URL where the app is hosted
 - **title** The title of your Shiny app
 - **output** The base folder used by shiny to serve static files. This is usually the www folder in your project.
-- **icon** Icon Path to be used for the app. Size should be 512x512px. If left NULL a default icon is provided.
+- **icon** Icon Path to be used for the app. Relative to the project root folder. Recommended size is 512x512px. If left NULL a default icon is provided.
 - **color** Color of the app. Used to color the browser elements when the pwa is installed.
-- **offline_template** Path to the offline template you want to use. If left NULL the default template is used.
+- **offline_template** Path to the offline template you want to use. Relative to the project root folder. If left NULL the default template is used.
 - **offline_message** When using the default offline page template, message to be displayed.
 
 4 - If you prefer to not generate the service worker every time your app starts, you can omit the `output` attribute from the `pwa()` function and instead run `createServiceWorker(output_folder)` to generate a `pwa.service-worker.js` file. This file does not need to be added as a dependency to your UI but must be available under `https://yourapp.com/pwa.service-worker.js`. The easiest way to achieve this with shiny is to add it to your `www` folder.
