@@ -1,5 +1,5 @@
 #' Adds PWA support. Takes care of all the support required for browsers to
-#' recognise the application as a Progressive Web app.
+#' recognize the application as a Progressive Web app.
 #'
 #' @param domain The base URL where the app is hosted
 #' @param title The title of your Shiny app

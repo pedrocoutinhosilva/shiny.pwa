@@ -7,7 +7,7 @@
 createOfflinePage(title, template, offline_message)
 }
 \arguments{
-\item{title}{title of the page when the pwa is running in offline mode.}
+\item{title}{title of the page when the PWA is running in offline mode.}
 
 \item{template}{HTML template to use. If null a default template is used.}
 

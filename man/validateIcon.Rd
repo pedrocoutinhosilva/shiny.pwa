@@ -2,7 +2,7 @@
 % Please edit documentation in R/validators.R
 \name{validateIcon}
 \alias{validateIcon}
-\title{Validates the provided icon. If the icon doesnt exist returns a default one.}
+\title{Validates the provided icon. If the icon does not exist returns a default one.}
 \usage{
 validateIcon(icon)
 }
@@ -13,7 +13,7 @@ validateIcon(icon)
 A valid icon path
 }
 \description{
-Validates the provided icon. If the icon doesnt exist returns a default one.
+Validates the provided icon. If the icon does not exist returns a default one.
 }
 \seealso{
 [validateDomain()], [validateLocation()]

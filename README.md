@@ -34,7 +34,7 @@ devtools::install_github('pedrocoutinhosilva/shiny.pwa')
 library(shiny.pwa)
 ```
 
-3 - Call the `pwa` function in your UI definition, in any place you could add ui elements (for example `mainPanel` in a `fluidPage`):
+3 - Call the `pwa` function in your UI definition, in any place you could add UI elements (for example `mainPanel` in a `fluidPage`):
 ```R
 # ui.R
 ui <- fluidPage(
@@ -59,7 +59,7 @@ The following options are available:
 
 4 - If you prefer to not generate the service worker every time your app starts, you can omit the `output` attribute from the `pwa()` function and instead run `createServiceWorker(output_folder)` to generate a `pwa.service-worker.js` file. This file does not need to be added as a dependency to your UI but must be available under `https://yourapp.com/pwa.service-worker.js`. The easiest way to achieve this with shiny is to add it to your `www` folder.
 
-4 - Thats it!
+4 - That's it!
 
 # Using PWAs
 User experience depends on the OS and browser.

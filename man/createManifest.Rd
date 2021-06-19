@@ -7,9 +7,9 @@
 createManifest(title, start_url, color)
 }
 \arguments{
-\item{title}{title of the page when the pwa is running in offline mode.}
+\item{title}{title of the page when the PWA is running in offline mode.}
 
-\item{start_url}{The ull url where the app is hosted.}
+\item{start_url}{The full url where the app is hosted.}
 
 \item{color}{An argument that can be used in the
 offline template to show a custom message.}

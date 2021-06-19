@@ -1,11 +1,11 @@
 #' Applies a provided template string to a list of arguments.
-#' Any argumements gives will be replaced in the template via placeholders wrapped in <<argument>>
+#' Any arguments gives will be replaced in the template via placeholders wrapped in <<argument>>
 #'
 #' @param template A string with placeholders that can be replaced with the given arguments.
 #' @param arguments Named list with values used for the template placeholders.
 #' @importFrom utils modifyList
 #' @importFrom htmltools htmlTemplate
-#' @return A string based on the template with the diferent argumetns applied.
+#' @return A string based on the template with the different arguments applied.
 applyTemplate <- function(template, arguments = list()) {
   as.character(do.call(htmlTemplate, modifyList(list(text_ = template), arguments)))
 }
@@ -17,7 +17,7 @@ getTemplate <- function(file) {
   paste0(system.file("pwa", package = "shiny.pwa"), "/", file)
 }
 
-#' Generates the folder structure required for the pwa files.
+#' Generates the folder structure required for the PWA files.
 #'
 #' @family fileGen
 #' @seealso [createServiceWorker()], [createIcon()], [createOfflinePage()],
@@ -41,7 +41,7 @@ createServiceWorker <- function(output) {
   file.copy(getTemplate("pwa-service-worker.js"), paste0(getwd(), "/", output))
 }
 
-#' Creates the pwa icon file based on the given path.
+#' Creates the PWA icon file based on the given path.
 #'
 #' @family fileGen
 #' @seealso [createDirectories()], [createServiceWorker()],
@@ -58,7 +58,7 @@ createIcon <- function(icon) {
 #' @seealso [createDirectories()], [createServiceWorker()], [createIcon()],
 #'    [createManifest()]
 #'
-#' @param title title of the page when the pwa is running in offline mode.
+#' @param title title of the page when the PWA is running in offline mode.
 #' @param template HTML template to use. If null a default template is used.
 #' @param offline_message An argument that can be used
 #'    in the offline template to show a custom message.
@@ -91,8 +91,8 @@ createOfflinePage <- function(title, template, offline_message) {
 #' @seealso [createDirectories()], [createServiceWorker()], [createIcon()],
 #'    [createOfflinePage()]
 #'
-#' @param title title of the page when the pwa is running in offline mode.
-#' @param start_url The ull url where the app is hosted.
+#' @param title title of the page when the PWA is running in offline mode.
+#' @param start_url The full url where the app is hosted.
 #' @param color An argument that can be used in the
 #'    offline template to show a custom message.
 #' @importFrom readr read_file

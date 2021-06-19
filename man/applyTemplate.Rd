@@ -3,7 +3,7 @@
 \name{applyTemplate}
 \alias{applyTemplate}
 \title{Applies a provided template string to a list of arguments.
-Any argumements gives will be replaced in the template via placeholders wrapped in <<argument>>}
+Any arguments gives will be replaced in the template via placeholders wrapped in <<argument>>}
 \usage{
 applyTemplate(template, arguments = list())
 }
@@ -13,9 +13,9 @@ applyTemplate(template, arguments = list())
 \item{arguments}{Named list with values used for the template placeholders.}
 }
 \value{
-A string based on the template with the diferent argumetns applied.
+A string based on the template with the different arguments applied.
 }
 \description{
 Applies a provided template string to a list of arguments.
-Any argumements gives will be replaced in the template via placeholders wrapped in <<argument>>
+Any arguments gives will be replaced in the template via placeholders wrapped in <<argument>>
 }

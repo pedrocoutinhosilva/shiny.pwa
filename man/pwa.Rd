@@ -3,7 +3,7 @@
 \name{pwa}
 \alias{pwa}
 \title{Adds PWA support. Takes care of all the support required for browsers to
-recognise the application as a Progressive Web app.}
+recognize the application as a Progressive Web app.}
 \usage{
 pwa(
   domain,
@@ -41,7 +41,7 @@ A UI definition that can be passed to the [shinyUI] function.
 }
 \description{
 Adds PWA support. Takes care of all the support required for browsers to
-recognise the application as a Progressive Web app.
+recognize the application as a Progressive Web app.
 }
 \note{
 For additional details on progressive web apps, visit

@@ -2,7 +2,7 @@
 % Please edit documentation in R/templates.R
 \name{createIcon}
 \alias{createIcon}
-\title{Creates the pwa icon file based on the given path.}
+\title{Creates the PWA icon file based on the given path.}
 \usage{
 createIcon(icon)
 }
@@ -10,7 +10,7 @@ createIcon(icon)
 \item{icon}{Path to the icon used for PWA installations.}
 }
 \description{
-Creates the pwa icon file based on the given path.
+Creates the PWA icon file based on the given path.
 }
 \seealso{
 [createDirectories()], [createServiceWorker()],

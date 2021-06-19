@@ -8,7 +8,7 @@ validateLocation(location)
 }
 \arguments{
 \item{location}{a string representing the domain subfolder
-where the appication is deployed.}
+where the application is deployed.}
 }
 \value{
 A validated version of the location

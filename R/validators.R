@@ -23,7 +23,7 @@ validateDomain <- function(domain) {
 #' Clears and validates the provided location
 #'
 #' @param location a string representing the domain subfolder
-#'    where the appication is deployed.
+#'    where the application is deployed.
 #' @return A validated version of the location
 #'
 #' @family validators
@@ -38,7 +38,7 @@ validateLocation <- function(location) {
   location
 }
 
-#' Validates the provided icon. If the icon doesnt exist returns a default one.
+#' Validates the provided icon. If the icon does not exist returns a default one.
 #'
 #' @param icon Path location for an icon relative to the project root
 #' @return A valid icon path
@@ -58,7 +58,7 @@ validateIcon <- function(icon) {
     }
     icon <- paste0(getwd(), icon)
     if (is.null(icon) || !file.exists(icon)) {
-      message("Icon doesnt exist. Using default package icon.")
+      message("Icon does not exist. Using default package icon.")
       icon <- getTemplate("icon.png")
     }
   }

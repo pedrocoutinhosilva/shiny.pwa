@@ -2,12 +2,12 @@
 % Please edit documentation in R/templates.R
 \name{createDirectories}
 \alias{createDirectories}
-\title{Generates the folder structure required for the pwa files.}
+\title{Generates the folder structure required for the PWA files.}
 \usage{
 createDirectories()
 }
 \description{
-Generates the folder structure required for the pwa files.
+Generates the folder structure required for the PWA files.
 }
 \seealso{
 [createServiceWorker()], [createIcon()], [createOfflinePage()],
