@@ -1,3 +1,5 @@
+<img src="man/figures/hexsticker.svg" align="right" alt="" width="130" />
+
 # shiny.pwa
 
 <!-- badges: start -->
